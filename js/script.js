@@ -3,11 +3,47 @@
   Scripts gerais do site
 */
 
-// Script inicial
 console.log("Petshop Fase 2 - JS carregado");
 
-// Formulário de cadastro e agendamento
-document.addEventListener("DOMContentLoaded", () => {
+// -----------------------------
+// 1) Carrossel
+// -----------------------------
+function initCarousel() {
+  const el = document.querySelector("#carouselPetshop");
+  if (!el) return;
+
+  if (typeof bootstrap !== "undefined") {
+    new bootstrap.Carousel(el, {
+      interval: 3000,
+      ride: "carousel",
+      pause: false,
+      wrap: true
+    });
+  }
+}
+
+// -----------------------------
+// 2) Função temporal (data/hora)
+// -----------------------------
+function initDataHora() {
+  const el = document.querySelector("#dataHoraAtual");
+  if (!el) return;
+
+  function atualizar() {
+    const agora = new Date();
+    // Formato simples e legível
+    const texto = agora.toLocaleString("pt-BR");
+    el.textContent = `Data e hora: ${texto}`;
+  }
+
+  atualizar();
+  setInterval(atualizar, 1000);
+}
+
+// -----------------------------
+// 3) Formulário
+// -----------------------------
+function initFormularioAgendamento() {
   const form = document.querySelector("#formAgendamento");
   const resumo = document.querySelector("#resumoAgendamento");
 
@@ -32,7 +68,6 @@ document.addEventListener("DOMContentLoaded", () => {
     if (hidratacao && hidratacao.checked) extras.push(hidratacao.value);
     if (corteUnhas && corteUnhas.checked) extras.push(corteUnhas.value);
 
-    // Monta resumo simples
     let texto = `<strong>Agendamento confirmado!</strong><br>`;
     texto += `Cliente: ${nomeCliente}<br>`;
     texto += `Pet: ${nomePet}<br>`;
@@ -47,21 +82,13 @@ document.addEventListener("DOMContentLoaded", () => {
     resumo.innerHTML = texto;
     resumo.classList.remove("d-none");
   });
-});
+}
 
-
-
-// Inicialização do carrossel
+// -----------------------------
+// Inicialização geral
+// -----------------------------
 document.addEventListener("DOMContentLoaded", () => {
-  const el = document.querySelector("#carouselPetshop");
-
-  // Verifica se o elemento existe e se o Bootstrap JS carregou
-  if (el && typeof bootstrap !== "undefined") {
-    new bootstrap.Carousel(el, {
-      interval: 3000,
-      ride: "carousel",
-      pause: false,
-      wrap: true
-    });
-  }
+  initCarousel();
+  initDataHora();
+  initFormularioAgendamento();
 });
