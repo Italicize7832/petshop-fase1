@@ -8,6 +8,9 @@
   <link rel="stylesheet" href="./css/style.css" />
 </head>
 <body>
+<a class="visually-hidden-focusable" href="#conteudo">
+  Pular para o conteúdo principal
+</a>
 
   <header>
     <h1>Petshop Amigo Fiel</h1>
@@ -23,28 +26,35 @@
     <hr />
   </header>
 
-<main>
-  <h2>Rações não perecíveis</h2>
+<main id="conteudo" class="container my-4">
+  <h2 class="h4">Rações não perecíveis</h2>
   <p>Alimentação balanceada para diferentes perfis de pets.</p>
 
-  <section>
-    <h3>Produtos</h3>
+  <div class="row g-3">
+    <div class="col-md-6">
+      <article class="card h-100">
+        <img src="./img/racao-cao.jpg" class="card-img-top" alt="Ração para cães">
+        <div class="card-body">
+          <h3 class="h5 card-title">Ração Premium para Cães 3 kg</h3>
+          <p class="card-text">Ração seca premium com nutrientes para saúde e energia diária.</p>
+          <p class="mb-0"><strong>Valor:</strong> R$ 79,90</p>
+        </div>
+      </article>
+    </div>
 
-    <article>
-      <h4>Ração Premium para Cães 3 kg</h4>
-      <img src="img/racao-cao.jpg" alt="Ração para cães" />
-      <p>Ração seca premium com nutrientes para saúde e energia diária.</p>
-      <p><strong>Valor:</strong> R$ 79,90</p>
-    </article>
-
-    <article>
-      <h4>Ração para Gatos 1,5 kg</h4>
-      <img src="img/racao-gato.jpg" alt="Ração para gatos" />
-      <p>Ração seca com foco em pelagem, digestão e bem-estar.</p>
-      <p><strong>Valor:</strong> R$ 64,90</p>
-    </article>
-  </section>
+    <div class="col-md-6">
+      <article class="card h-100">
+        <img src="./img/racao-gato.jpg" class="card-img-top" alt="Ração para gatos">
+        <div class="card-body">
+          <h3 class="h5 card-title">Ração para Gatos 1,5 kg</h3>
+          <p class="card-text">Foco em pelagem, digestão e bem-estar.</p>
+          <p class="mb-0"><strong>Valor:</strong> R$ 64,90</p>
+        </div>
+      </article>
+    </div>
+  </div>
 </main>
+
 
 
   <hr />

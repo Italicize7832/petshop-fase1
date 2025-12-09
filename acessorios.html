@@ -8,6 +8,9 @@
   <link rel="stylesheet" href="./css/style.css" />
 </head>
 <body>
+<a class="visually-hidden-focusable" href="#conteudo">
+  Pular para o conteúdo principal
+</a>
 
   <header>
     <h1>Petshop Amigo Fiel</h1>
@@ -23,28 +26,35 @@
     <hr />
   </header>
 
-<main>
-  <h2>Acessórios</h2>
+<main id="conteudo" class="container my-4">
+  <h2 class="h4">Acessórios</h2>
   <p>Confira opções de conforto, passeio e diversão para o seu pet.</p>
 
-  <section>
-    <h3>Produtos</h3>
+  <div class="row g-3">
+    <div class="col-md-6">
+      <article class="card h-100">
+        <img src="./img/cama.jpg" class="card-img-top" alt="Cama confortável para pets">
+        <div class="card-body">
+          <h3 class="h5 card-title">Cama Conforto Média</h3>
+          <p class="card-text">Cama macia e resistente, ideal para cães e gatos de porte médio.</p>
+          <p class="mb-0"><strong>Valor:</strong> R$ 129,90</p>
+        </div>
+      </article>
+    </div>
 
-    <article>
-      <h4>Cama Conforto Média</h4>
-      <img src="img/cama.jpg" alt="Cama para pet" />
-      <p>Cama macia e resistente, ideal para cães e gatos de porte médio.</p>
-      <p><strong>Valor:</strong> R$ 129,90</p>
-    </article>
-
-    <article>
-      <h4>Brinquedo Mordedor</h4>
-      <img src="img/mordedor.jpg" alt="Brinquedo mordedor para cães" />
-      <p>Brinquedo de borracha para estímulo e redução do estresse.</p>
-      <p><strong>Valor:</strong> R$ 29,90</p>
-    </article>
-  </section>
+    <div class="col-md-6">
+      <article class="card h-100">
+        <img src="./img/mordedor.jpg" class="card-img-top" alt="Brinquedo mordedor para cães">
+        <div class="card-body">
+          <h3 class="h5 card-title">Brinquedo Mordedor</h3>
+          <p class="card-text">Brinquedo de borracha para estímulo e redução do estresse.</p>
+          <p class="mb-0"><strong>Valor:</strong> R$ 29,90</p>
+        </div>
+      </article>
+    </div>
+  </div>
 </main>
+
 
 
   <hr />

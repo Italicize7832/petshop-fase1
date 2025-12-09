@@ -13,6 +13,9 @@
 </head>
 
 <body>
+<a class="visually-hidden-focusable" href="#conteudo">
+  Pular para o conteúdo principal
+</a>
 
   <header class="container py-3">
     <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-md-between gap-2">
@@ -38,7 +41,7 @@
     <hr class="my-3" />
   </header>
 
-  <main class="container my-4">
+  <main id="conteudo" class="container my-4">
 
     <h2 class="h4 mb-3">Cadastro do Cliente e do Pet</h2>
 
@@ -202,7 +205,7 @@
 
       <!-- RESUMO -->
       <div class="col-12">
-        <div id="resumoAgendamento" class="alert alert-info d-none" role="alert"></div>
+        <div id="resumoAgendamento" class="alert alert-info d-none" role="alert" aria-live="polite"></div>
       </div>
 
     </form>
